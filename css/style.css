@@ -1,0 +1,14 @@
+.product_tag{
+    border-style: solid;
+    border-color: greenyellow;
+    background-color: lightgrey;
+    padding: 10px;
+    width: 200px;
+    height: auto;
+}
+.product_tag_text{
+    font-size: 20px;
+}
+.product_tag_text2{
+    color: blue;
+}

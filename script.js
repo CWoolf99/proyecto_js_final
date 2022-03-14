@@ -22,6 +22,22 @@ const productos=[{id:1, nombre:"Macbook Pro", precio:20000, imagen:"assets/produ
     })
 
     function anadiralcarrito(e) {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            title: 'Se agregó al carrito'
+          })
         const contenedorC=document.querySelector('#carrito');
         contenedorC.innerHTML=``;
         let nombre=e.target.getAttribute('nombre')

@@ -1,0 +1,6 @@
+[
+    {"id":1, "nombre":"Macbook Pro", "precio":20000, "imagen":"assets/producto_mac.jpg"},
+    {"id":2, "nombre":"Macbook Pro2", "precio":20000, "imagen":"assets/producto_mac.jpg"},
+    {"id":3, "nombre":"Macbook Pro3", "precio":20000, "imagen":"assets/producto_mac.jpg"},
+    {"id":4, "nombre":"Macbook Pro4", "precio":20000, "imagen":"assets/producto_mac.jpg"}
+]

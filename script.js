@@ -1,8 +1,10 @@
 let carrito=[];
-const productos=[{id:1, nombre:"Macbook Pro", precio:20000, imagen:"assets/producto_mac.jpg"},
-    {id:2, nombre:"Macbook Pro2", precio:20000, imagen:"assets/producto_mac.jpg"},
-    {id:3, nombre:"Macbook Pro3", precio:20000, imagen:"assets/producto_mac.jpg"},
-    {id:4, nombre:"Macbook Pro4", precio:20000, imagen:"assets/producto_mac.jpg"}];
+async function obtenerProductos() {
+  const response = await fetch('./json/productos.json')
+  return await response.json()
+}
+
+obtenerProductos().then(productos=>{
 
     productos.forEach((info) =>{ 
         const tag=document.createElement("div");
@@ -19,7 +21,7 @@ const productos=[{id:1, nombre:"Macbook Pro", precio:20000, imagen:"assets/produ
         const contenedor=document.querySelector('#store');
         contenedor.appendChild(tag);
         contenedor.appendChild(boton_div)
-    })
+    })})
 
     function anadiralcarrito(e) {
         const Toast = Swal.mixin({
@@ -51,4 +53,3 @@ const productos=[{id:1, nombre:"Macbook Pro", precio:20000, imagen:"assets/produ
     }
     var carritoLS=localStorage.getItem('miOrden');
     carritoLS=JSON.parse(carritoLS)
-
